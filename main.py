@@ -27,3 +27,48 @@ if __name__ == "__main__":
     welcome_message()
     show_menu()
     print("\nReady to serve our community with the finest donuts!")
+
+# Our complete menu organized by category
+donut_menu = {
+    'Small Batch': [ #dictionary with key-value pairs where 
+        'Wild Rice & Honey',
+        'Maple Bacon',
+        'Swedish Cardamon'
+    ],
+    'Seasonal': [
+        'Apple Cider',
+        'Jucy Lucy',
+        'Lake of the Woods'
+    ],
+    'Local Collabs':[
+        'Spyhouse Coffee Cake',
+        'Fulton Beer & Pretzel',
+        'Sweet Science Ice Cream'
+    ]
+}
+
+    # Locally-sourced toppings
+toppings = [
+    'House-Made Sprinkles',
+    'Candied Hazelnuts',
+    'Bee Pollen',
+    'Cookie Butter Drizzle'
+]
+
+# Track our morning sales with a dictionary
+morning_sales = []
+
+# Record our first sale (by appending an transaction to the sale dictionary)
+morning_sales.append({
+    'item': 'Wild Rice & Honey',
+    'quantity': 2,
+    'toppings': ['Bee Pollen'],
+    'time': '7:30 AM'
+})
+
+# Display our current menu - using a for loop
+print("Today's Morning Menu:")
+for category, items in donut_menu.items():
+    print(category + ":")
+    for item in items:
+        print(" - " + item)
